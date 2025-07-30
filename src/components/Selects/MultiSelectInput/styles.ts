@@ -1,0 +1,88 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+`;
+
+export const Label = styled.label`
+  color: white;
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.inter};
+`;
+
+export const SelectContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+export const Input = styled.input`
+  padding: 10px 25px 10px 10px;
+  border-radius: 8px;
+  border: 1px solid ${({ theme }) => theme.colors.primary_colors.blue200};
+  background-color: ${({ theme }) => theme.colors.background_colors.backgroundBlue};
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.inter};
+  color: ${({ theme }) => theme.colors.primary_colors.lilac};
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border: 0.25px solid ${({ theme }) => theme.colors.primary_colors.lilac};
+  }
+`;
+
+export const Dropdown = styled.div`
+  position: absolute;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.background_colors.backgroundBlue};
+  border: 1px solid ${({ theme }) => theme.colors.primary_colors.blue200};
+  border-radius: 8px;
+  margin-top: 5px;
+  max-height: 150px;
+  min-height: 37px;
+  overflow-y: auto;
+  z-index: 10;
+  &::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.primary_colors.blue}; 
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.primary_colors.blue200}; 
+    border-radius: 10px; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: ${(props) => props.theme.colors.primary_colors.lilac}; 
+  }
+`;
+
+export const Option = styled.div`
+  display:flex;
+  justify-content:space-between;
+  padding: 9px;
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.inter};
+  color: ${({ theme }) => theme.colors.primary_colors.lilac};
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary_colors.blue};
+  }
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.primary_colors.lilac};
+`;

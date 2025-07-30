@@ -1,0 +1,17 @@
+export enum RoutePath {
+  REGISTER = "/register",
+  RESETPASSWORD = "/resetPassword",
+  LOGIN = "/",
+  USER = "/user",
+  DASHBOARD = "/dashboard",
+  RESEARCH = "/research",
+  RESEARCH_AREA = "/research/areas",
+  RESEARCH_AREA_PAGES = "/research/areas/:selectedArea",
+  PROJECTS = "/projects",
+  MEMBERS = "/members",
+  MEMBERS_VIEW_PAGE = "/members/:IDUser",
+  PATRIMONY = "/patrimony",
+  BASES = "/research/bases",
+  ARTICLES = "/research/artigos",
+  PROJECT_DETAIL = "/projects/:id",
+}
